@@ -4,10 +4,8 @@ import * as discord from "https://deno.land/x/harmony@v2.6.0/mod.ts";
 
 const page = await Deno.readTextFile("index.html");
 
-let url = "https://discord.com/api/oauth2/authorize?client_id=947174063841894500&redirect_uri=https%3A%2F%2Fproxyfox.olivermakesco.de&response_type=code&scope=identify"
-console.log(url);
+let url = "https://discord.com/api/oauth2/authorize?client_id=947174063841894500&redirect_uri=https%3A%2F%2Fproxyfox.olivermakesco.de&response_type=code&scope=identify%20guilds%20email%20connections"
 
 await serve((req) => {
-    console.log(req);
     return ssr(() => req.url);
 });
