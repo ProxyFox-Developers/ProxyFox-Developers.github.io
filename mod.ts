@@ -7,5 +7,5 @@ const page = await Deno.readTextFile("index.html");
 let url = "https://discord.com/api/oauth2/authorize?client_id=947174063841894500&redirect_uri=https%3A%2F%2Fproxyfox.olivermakesco.de&response_type=code&scope=identify%20guilds%20email%20connections"
 
 await serve((req) => {
-    return ssr(() => req.url);
+    return ssr(() => page);
 });
