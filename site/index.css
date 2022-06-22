@@ -120,6 +120,27 @@ html {
     border-radius: 25px;
 }
 
+dl {
+    display: block;
+    position: fixed;
+    width: 25vw;
+    height: 75vh;
+    top: 18.75vh;
+    left: 12.5vw;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0);
+}
+
+dt {
+    display: block;
+    font-size: 4vh;
+    text-align: center;
+    width: 25vw;
+    overflow: auto;
+    background-color: rgba(0,0,0,0);
+}
+
 .pf-maincontent {
     display: block;
     position: fixed;
@@ -133,4 +154,33 @@ html {
     border-radius: 25px;
     font-size: 2vh;
     text-align: center;
+}
+
+#pf-title {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    top: -7.25vw;
+    width: 27.5vw;
+    vertical-align: middle;
+    font-size: 4vh;
+}
+
+#pf-image {
+    display: inline;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 15vw;
+    height: 15vw;
+    border: none;
+    border-radius: 25px;
+    margin: none;
+}
+
+#pf-body {
+    display: inline-block;
+    position: relative;
+    top: -5vh;
+    font-size: 3vh;
 }
