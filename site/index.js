@@ -6,7 +6,7 @@ const sidebars = {
             description: "Check back here later to see what's new"
         }
     },
-    "/home": {
+    "home": {
         "About ProxyFox": {
             title: "About ProxyFox",
             image: "https://cdn.discordapp.com/avatars/947174063841894500/50c07a7ddecdbe1f1a22d96f6dc63f1f.png",
@@ -51,6 +51,7 @@ async function updateTab() {
     let page = document.getElementById(window.location.pathname.substr(1)) || homeTab;
     lastTab.classList.remove("pf-tab");
     lastTab = page;
+    currentSidebar = sidebars[page.id] || sidebars["wip"];
     page.classList.add("pf-tab");
     var child = sidebar.lastElementChild;
     while (child) {
