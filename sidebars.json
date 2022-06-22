@@ -1,0 +1,16 @@
+{
+    "wip": {
+        "construction": {
+            "title": "Under Construction...",
+            "image": null,
+            "description": "Check back here later to see what's new"
+        }
+    },
+    "home": {
+        "about": {
+            "title": "About ProxyFox",
+            "image": "https://cdn.discordapp.com/avatars/947174063841894500/50c07a7ddecdbe1f1a22d96f6dc63f1f.png",
+            "description": "ProxyFox is a modern Discord bot designed for systems to aid communication.\nIt uses Discord's webhooks to create pseudo-users in which to proxy message content as."
+        }
+    }
+}
