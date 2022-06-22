@@ -33,12 +33,12 @@ serve(async (req) => {
                     content = (sidebar[currentSidebar] || sidebar["wip"])[i]
                     break
                 }
-            console.log(content)
             let page = await Deno.readTextFile("./site/index.html")
             page = page.replace("<!--sidebar-->", await getSidebar(sidebar, currentSidebar))
             page = page.replace("<!--title-->", content.title.replace("\n", "<br>"))
             page = page.replace("%image%", content.image)
             page = page.replace("<!--body-->", content.description.replace("\n", "<br>"))
+            page = page.replace("%description%", content.title)
             return new Response(page, {
                 headers: {
                     "content-type": "text/html"
