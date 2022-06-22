@@ -17,6 +17,7 @@ switch (window.location.pathname) {
         break;
 }
 function update(name) {
+    if ("/"+name == window.location.pathname) return
     window.history.pushState({}, "ProxyFox", window.location.protocol+"/"+name)
     switch (name) {
         case "system":
