@@ -5,23 +5,12 @@
 </head>
 <body>
     <div class="pf-nav">
-        <div class="pf-tab">
-            <div class="pf-tab-back"></div>
-            <div class="pf-tab-left"></div>
-            <div class="pf-tab-right"></div>
-        </div>
-        <div title="Home" class="pf-click home">Home</div>
-        <div onclick="update('home')" title="Home" class="pf-redirect home"> </div>
-        <div title="System" class="pf-click system">System</div>
-        <div onclick="update('system')" title="System" class="pf-redirect system"> </div>
-        <div title="Members" class="pf-click members">Members</div>
-        <div onclick="update('members')" title="Members" class="pf-redirect members"> </div>
-        <div title="Switches" class="pf-click switches">Switches</div>
-        <div onclick="update('switches')" title="Switches" class="pf-redirect switches"> </div>
-        <div title="Messages" class="pf-click messages">Messages</div>
-        <div onclick="update('messages')" title="Messages" class="pf-redirect messages"> </div>
-        <div title="Settings" class="pf-click settings">Settings</div>
-        <div onclick="update('settings')" title="Settings" class="pf-redirect settings"> </div>
+        <a id="home" href="/home" title="Home" class="pf-click pf-tab">Home</a>
+        <a id="system" href="/system" title="System" class="pf-click">System</a>
+        <a id="members" href="/members" title="Members" class="pf-click">Members</a>
+        <a id="switches" href="/switches" title="Switches" class="pf-click">Switches</a>
+        <a id="messages" href="/messages" title="Messages" class="pf-click">Messages</a>
+        <a id="settings" href="/settings" title="Settings" class="pf-click">Settings</a>
     </div>
     <div class="pf-sidebar">
         <dl id="pf-sidebar">

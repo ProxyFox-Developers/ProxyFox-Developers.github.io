@@ -14,9 +14,29 @@ const sidebars = {
         }
     }
 }
+
+/**
+ * Handles the onclick event to allow for navigation within JS, and
+ * prevents the default handler normally assigned to the element from running.
+ *
+ * @param event The event object. We require #id.
+ * @return {@code false} to prevent <a>'s native handler from running.
+ */
+function onNavClick(event) {
+    event.preventDefault();
+    update(event.target.id);
+    // Must return false.
+    return false;
+}
+
+for(let element of document.getElementsByClassName("pf-click")) {
+    element.addEventListener("click", onNavClick);
+}
+
+let lastTab = document.getElementsByClassName("pf-tab")[0];
+let homeTab = document.getElementById("home")
 var currentSidebar = sidebars["/home"]
 
-let tab = document.getElementsByClassName("pf-tab")[0];
 let sidebar = document.getElementById("pf-sidebar");
 let maincontent = document.getElementById("pf-content");
 let title = document.getElementById("pf-title");
@@ -28,32 +48,11 @@ function setMain(content) {
     body.innerText = content.description
 }
 async function updateTab() {
-    switch (window.location.pathname) {
-        case "/system":
-            tab.style.left = "12.5vw"
-            currentSidebar = sidebars["wip"]
-            break;
-        case "/members":
-            tab.style.left = "25vw"
-            currentSidebar = sidebars["wip"]
-            break;
-        case "/switches":
-            tab.style.left = "37.5vw"
-            currentSidebar = sidebars["wip"]
-            break;
-        case "/messages":
-            tab.style.left = "50vw"
-            currentSidebar = sidebars["wip"]
-            break;
-        case "/settings":
-            tab.style.left = "62.5vw"
-            currentSidebar = sidebars["wip"]
-            break;
-        default:
-            tab.style.left = "0px"
-            currentSidebar = sidebars["/home"]
-    }
-    var child = sidebar.lastElementChild; 
+    let page = document.getElementById(window.location.pathname.substr(1)) || homeTab;
+    lastTab.classList.remove("pf-tab");
+    lastTab = page;
+    page.classList.add("pf-tab");
+    var child = sidebar.lastElementChild;
     while (child) {
         sidebar.removeChild(child);
         child = sidebar.lastElementChild;
