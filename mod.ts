@@ -1,5 +1,4 @@
-import { serve } from "https://deno.land/std@0.114.0/http/server.ts"
-import { ssr } from "https://crux.land/api/get/4cfWmS.ts"
+import { serve } from "https://deno.land/std@0.144.0/http/server.ts"
 
 console.log("listening...")
 serve(async (req) => {
