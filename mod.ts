@@ -2,7 +2,7 @@ import { serve } from "https://deno.land/std@0.114.0/http/server.ts"
 import { ssr } from "https://crux.land/api/get/4cfWmS.ts"
 
 console.log("listening...")
-await serve((req) => {
+serve((req) => {
     var split = req.url.split("://")[1]
     var url = split.substring(split.indexOf("/"))
     switch (url) {
