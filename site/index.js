@@ -1,19 +1,5 @@
-const sidebars = {
-    "wip": {
-        "Under Construction": {
-            title: "Under Construction...",
-            image: null,
-            description: "Check back here later to see what's new"
-        }
-    },
-    "home": {
-        "About ProxyFox": {
-            title: "About ProxyFox",
-            image: "https://cdn.discordapp.com/avatars/947174063841894500/50c07a7ddecdbe1f1a22d96f6dc63f1f.png",
-            description: "ProxyFox is a modern Discord bot designed for systems to aid communication.\nIt uses Discord's webhooks to create pseudo-users in which to proxy message content as."
-        }
-    }
-}
+// Automatically set to the content in sidebars.json
+const sidebars = {}/*sidebars*/
 
 /**
  * Handles the onclick event to allow for navigation within JS, and
@@ -48,7 +34,7 @@ function setMain(content) {
     body.innerText = content.description
 }
 async function updateTab() {
-    let page = document.getElementById(window.location.pathname.substr(1)) || homeTab;
+    let page = document.getElementById(window.location.pathname.substr(1).split("/")[0]) || homeTab;
     lastTab.classList.remove("pf-tab");
     lastTab = page;
     currentSidebar = sidebars[page.id] || sidebars["wip"];
@@ -68,12 +54,9 @@ async function updateTab() {
         item.onclick = () => {
             setMain(currentSidebar[name])
         }
-        item.innerText = name
+        item.innerText = currentSidebar[name].title
         sidebar.appendChild(item)
-        let line = document.createElement("hr")
-        sidebar.appendChild(line)
     }
-    sidebar.removeChild(sidebar.lastElementChild)
 }
 updateTab()
 function update(name) {
