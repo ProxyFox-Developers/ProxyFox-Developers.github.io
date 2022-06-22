@@ -1,11 +1,28 @@
-import { serve } from "https://deno.land/std@0.114.0/http/server.ts";
-import { ssr } from "https://crux.land/nanossr@0.0.1";
-import * as discord from "https://deno.land/x/harmony@v2.6.0/mod.ts";
+import { serve } from "https://deno.land/std@0.114.0/http/server.ts"
+import { ssr } from "https://crux.land/api/get/4cfWmS.ts"
 
-const page = await Deno.readTextFile("index.html");
-
-let url = "https://discord.com/api/oauth2/authorize?client_id=947174063841894500&redirect_uri=https%3A%2F%2Fproxyfox.olivermakesco.de&response_type=code&scope=identify%20guilds%20email%20connections"
-
+console.log("listening...")
 await serve((req) => {
-    return ssr(() => page);
-});
+    var split = req.url.split("://")[1]
+    var url = split.substring(split.indexOf("/"))
+    switch (url) {
+        case "/index.js":
+            return new Response(Deno.readTextFileSync("./site/index.js"), {
+                headers: {
+                    "content-type": "text/javascript"
+                }
+            })
+        case "/index.css":
+            return new Response(Deno.readTextFileSync("./site/index.css"), {
+                headers: {
+                    "content-type": "text/css"
+                }
+            })
+        default:
+            return new Response(Deno.readTextFileSync("./site/index.html"), {
+                headers: {
+                    "content-type": "text/html"
+                }
+            })
+    }
+})
