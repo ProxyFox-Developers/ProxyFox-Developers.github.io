@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <script src="index.js" type="module"></script>
     <div class="pf-nav">
         <div class="pf-tab">
             <div class="pf-tab-back"></div>
@@ -12,20 +11,21 @@
             <div class="pf-tab-right"></div>
         </div>
         <div title="Home" class="pf-click home">Home</div>
-        <a href="home"><div title="Home" class="pf-redirect home"></div></a>
+        <div onclick="update('home')" title="Home" class="pf-redirect home"> </div>
         <div title="System" class="pf-click system">System</div>
-        <a href="system"><div title="System" class="pf-redirect system"></div></a>
+        <div onclick="update('system')" title="System" class="pf-redirect system"> </div>
         <div title="Members" class="pf-click members">Members</div>
-        <a href="members"><div title="Members" class="pf-redirect members"></div></a>
+        <div onclick="update('members')" title="Members" class="pf-redirect members"> </div>
         <div title="Switches" class="pf-click switches">Switches</div>
-        <a href="switches"><div title="Switches" class="pf-redirect switches"></div></a>
+        <div onclick="update('switches')" title="Switches" class="pf-redirect switches"> </div>
         <div title="Messages" class="pf-click messages">Messages</div>
-        <a href="messages"><div title="Messages" class="pf-redirect messages"></div></a>
+        <div onclick="update('messages')" title="Messages" class="pf-redirect messages"> </div>
         <div title="Settings" class="pf-click settings">Settings</div>
-        <a href="settings"><div title="Settings" class="pf-redirect settings"></div></a>
+        <div onclick="update('settings')" title="Settings" class="pf-redirect settings"> </div>
     </div>
     <div class="pf-sidebar"></div>
     <div class="pf-maincontent">
         <h1>Currently under construction...</h1>
     </div>
+    <script src="index.js"></script>
 </body>
