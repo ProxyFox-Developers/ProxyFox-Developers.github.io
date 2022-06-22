@@ -160,10 +160,10 @@ dt {
     display: inline-block;
     position: relative;
     right: 0;
-    top: -7.25vw;
-    width: 27.5vw;
+    top: -7vh;
+    width: calc(43.25vw - 16vh);
     vertical-align: middle;
-    font-size: 4vh;
+    font-size: 5vh;
 }
 
 #pf-image {
@@ -171,16 +171,20 @@ dt {
     position: relative;
     right: 0;
     top: 0;
-    width: 15vw;
-    height: 15vw;
+    width: 15vh;
+    height: 15vh;
     border: none;
     border-radius: 25px;
     margin: none;
 }
 
-#pf-body {
-    display: inline-block;
-    position: relative;
-    top: -5vh;
-    font-size: 3vh;
+.pf-body {
+    display: block;
+    position: fixed;
+    height: 60vh;
+    width: 43.25vw;
+    bottom: 6.25vh;
+    font-size: 5vh;
+    overflow: auto;
+    border-radius: 25px;
 }
