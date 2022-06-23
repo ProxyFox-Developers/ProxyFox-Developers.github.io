@@ -8,6 +8,8 @@ serve({
         // when set `dataDefer` to `true`, the router will loading data as defer
         // please check https://alephjs.org/docs/react/router/data-defer
         dataDefer: false,
-        render: (ctx) => renderToReadableStream(<App ssrContext={ctx} />, ctx),
+        render: (ctx) => {
+            return renderToReadableStream(<App ssrContext={ctx} />, ctx)
+        },
     },
 });

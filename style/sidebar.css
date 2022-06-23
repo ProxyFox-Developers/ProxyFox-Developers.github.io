@@ -1,15 +1,50 @@
 .pf-sidebar {
-
+    color: white;
+    --background-default: #444;
+    --border-color: #333;
 }
 
-.pf-sidebar .root {
-
+.pf-sidebar.root {
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--background-default);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
-.pf-sidebar .title {
-
+.pf-sidebar.title {
+    position: sticky;
+    z-index: 1;
+    font-size: 32px;
+    margin: none;
+    text-align: center;
+    height: 32px;
+    top: 0;
+    background-color: #383838;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 1px solid black;
 }
 
-.pf-sidebar .element {
+.pf-sidebar.element {
+    display: block;
+    width: 300px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--border-color);
+}
+.pf-sidebar.element.selected {
+    background-color: #383838;
+}
+.pf-sidebar.element:hover {
+    background-color: #383838;
+}
 
+.pf-sidebar.element p {
+    margin: 0;
+    position: relative;
+    width: auto;
+    left: 32px;
 }

@@ -1,0 +1,63 @@
+.pf-page {
+    --background-default: #555;
+    --border-color: #333;
+    --height: 100vh;
+    --width: calc(100vw - 300px);
+    color: white;
+}
+
+.pf-page.root {
+    position: absolute;
+    display: block;
+    left: 300px;
+    top: 0px;
+    width: var(--width);
+    height: var(--height);
+}
+
+.pf-page.title {
+    position: relative;
+    display: block;
+    font-size: 32px;
+    margin: none;
+    height: 32px;
+    top: 0;
+    background-color: #383838;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.pf-page.content {
+    width: var(--width);
+    margin: none;
+    padding: none;
+}
+
+.pf-page.content.background {
+    display: block;
+    position: relative;
+    height: calc(100% - 34px);
+    background-color: var(--background-default);
+    overflow: hidden;
+}
+
+.pf-page.content.image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: -2px;
+    top: -2px;
+    margin: none;
+    border: 2px solid var(--border-color);
+}
+
+.pf-page.content.description {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: calc(100% - 152px);
+    font-size: 24px;
+    left: 152;
+    overflow-y: auto;
+    overflow-x: unset;
+}

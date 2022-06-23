@@ -1,1 +1,21 @@
 @import url("./sidebar.css");
+@import url("./page.css");
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: none;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system, /* Firefox supports this but not yet `system-ui` */
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+}
