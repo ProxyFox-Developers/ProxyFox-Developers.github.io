@@ -1,4 +1,4 @@
-import { Link } from "aleph/react";
+import * as Aleph from "aleph/react";
 
 export default function E404() {
     return (
@@ -7,7 +7,7 @@ export default function E404() {
                 Ooooooops, nothing here!
           </h2>
           <p>
-                <Link to="/">Go back to the homepage</Link>
+                <Aleph.Link to="/">Go back to the homepage</Aleph.Link>
           </p>
         </div>
     );
