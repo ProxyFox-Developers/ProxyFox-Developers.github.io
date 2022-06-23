@@ -32,11 +32,14 @@ export default function generatePage(tab?: string, element?: string): JSX.Elemen
                             if (str.startsWith("--")) {
                                 const nStr = str.substring(2)
                                 arr.push(<>&emsp;{nStr}</>)
+                                arr.push(<br></br>)
                             } else if (str.startsWith("++")) {
                                 const nStr = str.substring(2)
                                 arr.push(<h2>{nStr}</h2>)
-                            } else arr.push(<>{str}</>)
-                            arr.push(<br></br>)
+                            } else {
+                                arr.push(<>{str}</>)
+                                arr.push(<br></br>)
+                            }
                         }
                         return arr
                     })()}

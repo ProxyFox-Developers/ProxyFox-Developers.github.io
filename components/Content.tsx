@@ -16,7 +16,7 @@ It uses Discord's webhooks to create pseudo-users in which to proxy message cont
 Before we start, it's important to note that we are not lawyers, and are unfit to give legal advice.
 So here's what we do and don't store:
 
-What we store:
+++What we store:
 - Any information directly given to ProxyFox
 -- Ex: Members, Swithces\n- Metadata relating to messages sent via ProxyFox
 -- Ex: the member who sent it
@@ -25,12 +25,12 @@ What we store:
 - Any information logged when an error occurs
 -- We do not know what that entails until errors happen.
 
-What we don't store:
+++What we don't store:
 - Anything not mentioned above
 - Message content
 - Any data that has been deleted from ProxyFox's database
 
-Extra notes:
+++Extra notes:
 - You can delete your system data at any time using 'pf>system delete'
                 `.trim()
             }
