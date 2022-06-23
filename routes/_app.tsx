@@ -1,10 +1,7 @@
-import * as Aleph from "aleph/react";
-import Test from "../components/test.tsx"
-
-export default function App({ children }: { children: React.ReactNode }) {
+export default function App({ children }: { children: React.ReactNode }): JSX.Element {
     return (
         <>
-            <Test></Test>
+            { children }
         </>
     );
 }
