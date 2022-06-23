@@ -1,7 +1,9 @@
-export default function SidebarElement({ children }: { children: React.ReactNode }): JSX.Element {
+export default function SidebarElement({ children, href, selected=false }: { children: React.ReactNode, href: string, selected?: boolean }): JSX.Element {
     return (
-        <div className="pf-sidebar element">
-            { children }
+        <a href={href}>
+            <div className={selected? "pf-sidebar element selected": "pf-sidebar element"}>
+            <p> { children } </p>
         </div>
+        </a>
     )
 }

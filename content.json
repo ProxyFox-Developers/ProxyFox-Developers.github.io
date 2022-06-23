@@ -1,0 +1,16 @@
+{
+    "home": {
+        "name": "Home",
+        "values": {
+            "about": {
+                "name": "About ProxyFox",
+                "image": "https://cdn.discordapp.com/avatars/872276960951296051/2855a032de10cbe0dec4f1177e469e06.png",
+                "description": "./contents/home.txt"
+            },
+            "privacy": {
+                "name": "Privacy Policy",
+                "description": "./contents/privacy.txt"
+            }
+        }
+    }
+}
