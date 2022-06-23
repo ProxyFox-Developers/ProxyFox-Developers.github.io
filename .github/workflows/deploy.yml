@@ -22,5 +22,5 @@ jobs:
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: proxyfox.dev # todo: change this to your project name in https://dash.deno.com
+          project: proxyfox-staging
           entrypoint: dist/server.js
