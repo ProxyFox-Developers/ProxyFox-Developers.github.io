@@ -1,7 +1,7 @@
 @import url("./sidebar.css");
 @import url("./page.css");
-@import url("./page-hidden.css");
 @import url("./sidebar-only.css");
+@import url("./page-hidden.css");
 
 a {
     text-decoration: none;
