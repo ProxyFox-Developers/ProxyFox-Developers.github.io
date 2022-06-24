@@ -1,21 +1,21 @@
-.pf-page {
+.pf-page.hidden {
     --background-default: #555;
     --border-color: #333;
     --height: 100%;
-    --width: calc(100vw - 300px);
+    --width: 100%;
     color: white;
 }
 
-.pf-page.root {
+.pf-page.root.hidden {
     position: absolute;
     display: block;
-    left: 300px;
+    left: 0px;
     top: 0px;
     width: var(--width);
     height: var(--height);
 }
 
-.pf-page.title {
+.pf-page.title.hidden {
     position: relative;
     display: block;
     font-size: 32px;
@@ -27,13 +27,13 @@
     text-align: center;
 }
 
-.pf-page.content {
+.pf-page.content.hidden {
     width: var(--width);
     margin: none;
     padding: none;
 }
 
-.pf-page.content.background {
+.pf-page.content.background.hidden {
     display: block;
     position: relative;
     height: calc(100% - 34px);
@@ -41,7 +41,7 @@
     overflow: hidden;
 }
 
-.pf-page.content.image {
+.pf-page.content.image.hidden {
     position: absolute;
     width: 150px;
     height: 150px;
@@ -51,7 +51,7 @@
     border: 2px solid var(--border-color);
 }
 
-.pf-page.content.description {
+.pf-page.content.description.hidden {
     display: block;
     position: relative;
     height: 100%;
@@ -62,7 +62,7 @@
     overflow-x: unset;
 }
 
-.pf-page.content.description.imageless {
+.pf-page.content.description.imageless.hidden {
     display: block;
     position: relative;
     height: 100%;

@@ -31,7 +31,7 @@
 
 .pf-sidebar.element {
     display: block;
-    width: 300px;
+    width: 100%;
     font-size: 24px;
     border-bottom: 2px solid var(--border-color);
 }

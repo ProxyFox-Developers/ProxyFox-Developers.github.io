@@ -1,6 +1,6 @@
-export default function PageTitle({ children }: { children: React.ReactNode }): JSX.Element {
+export default function PageTitle({ children, hidden }: { children: React.ReactNode, hidden: boolean }): JSX.Element {
     return (
-        <div className="pf-page title">
+        <div className={hidden? "pf-page title hidden": "pf-page title"}>
             { children }
         </div>
     )

@@ -6,7 +6,7 @@ import PageContentImage from "./PageContentImage.tsx"
 import PageContentDescription from "./PageContentDescription.tsx"
 import content from "./Content.tsx"
 
-export default function generatePage(tab?: string, element?: string): JSX.Element {
+export default function generatePage(tab?: string, element?: string, hidden = false): JSX.Element {
     if (!tab) tab = "home"
     let current = content[tab]
     if (!current) current = content["home"]
@@ -18,11 +18,11 @@ export default function generatePage(tab?: string, element?: string): JSX.Elemen
     const page = current.values[element]
 
     return (
-        <Page>
-            <PageTitle> {page.name} </PageTitle>
-            <PageContent>
-                {(page.image? <PageContentImage src={page.image}></PageContentImage>: <></>)}
-                <PageContentDescription>
+        <Page hidden={hidden}>
+            <PageTitle hidden={hidden}> {page.name} </PageTitle>
+            <PageContent hidden={hidden}>
+                {(page.image? <PageContentImage src={page.image} hidden={hidden}></PageContentImage>: <></>)}
+                <PageContentDescription hidden={hidden} image={!page.image}>
                     {(() => {
                         if (!page.description) return [<></>]
                         const description = page.description
@@ -38,7 +38,6 @@ export default function generatePage(tab?: string, element?: string): JSX.Elemen
                                 arr.push(<h2>{nStr}</h2>)
                             } else if (str.startsWith("::")) {
                                 const nStr = str.substring(2)
-                                console.log(nStr)
                                 arr.push(<a className="link" href={nStr}>{nStr}</a>)
                             } else {
                                 arr.push(<>{str}</>)

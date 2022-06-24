@@ -3,6 +3,7 @@ import Sidebar from "~/components/Sidebar.tsx"
 import SidebarElement from "~/components/SidebarElement.tsx"
 import generateSidebar from "~/components/SidebarGenerator.tsx"
 import generatePage from "~/components/PageGenerator.tsx"
+import SidebarOff from "~/components/SidebarOff.tsx"
 
 type Routing = {
     tab: string
@@ -17,7 +18,8 @@ export default function Index(): JSX.Element {
                 <meta name="description" content="The official website for the ProxyFox Discord bot." />
             </Aleph.Head>
             { generateSidebar(route.tab) }
-            { generatePage() }
+            { generatePage(route.tab) }
+            <SidebarOff></SidebarOff>
         </div>
     );
 }

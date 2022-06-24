@@ -1,6 +1,6 @@
 import { App } from "aleph/react";
 import { serve } from "aleph/server";
-import { renderToReadableStream } from "react-dom/server";
+import * as Server from "react-dom/server";
 
 serve({
     routes: "./routes/**/*.{tsx,ts}",
@@ -9,7 +9,8 @@ serve({
         // please check https://alephjs.org/docs/react/router/data-defer
         dataDefer: false,
         render: (ctx) => {
-            return renderToReadableStream(<App ssrContext={ctx} />, ctx)
+            
+            return Server.renderToReadableStream(<App ssrContext={ctx} />, ctx)
         },
     },
 });
