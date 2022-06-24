@@ -18,7 +18,7 @@ export default function Index(): JSX.Element {
             </Aleph.Head> 
             { generateSidebar(route.tab, route.element) }
             { generatePage(route.tab, route.element) }
-            <SidebarOff></SidebarOff>
+            <SidebarOff route={route.tab} tab={route.element}></SidebarOff>
         </div>
     );
 }

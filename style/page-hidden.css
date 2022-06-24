@@ -21,8 +21,10 @@
     font-size: 32px;
     margin: none;
     padding-top: 2px;
+    width: calc(100% - 36px);
     height: 36px;
     top: 0;
+    left: 36px;
     background-color: #383838;
     border-bottom: 2px solid var(--border-color);
     text-align: center;
@@ -72,4 +74,19 @@
     left: 0;
     overflow-y: auto;
     overflow-x: unset;
+}
+
+.pf-sidebar.on {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    padding-top: 2px;
+    font-size: 32px;
+    text-align: center;
+    background: #383838;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 1px solid black;
 }
