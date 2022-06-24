@@ -8,6 +8,8 @@ const content = {
                 description: `
 ProxyFox is a modern Discord bot designed for systems to aid communication.
 It uses Discord's webhooks to create pseudo-users in which to proxy message content as.
+
+::https://discord.gg/M2uBsJmRNT
 `.trim()
             },
             privacy: {
