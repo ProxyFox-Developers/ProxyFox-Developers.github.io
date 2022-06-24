@@ -4,6 +4,7 @@
     --height: 100%;
     --width: 100%;
     color: white;
+    visibility: visible;
 }
 
 .pf-page.root.hidden {
@@ -13,6 +14,7 @@
     top: 0px;
     width: var(--width);
     height: var(--height);
+    visibility: visible;
 }
 
 .pf-page.title.hidden {
@@ -28,12 +30,14 @@
     background-color: #383838;
     border-bottom: 2px solid var(--border-color);
     text-align: center;
+    visibility: visible;
 }
 
 .pf-page.content.hidden {
     width: var(--width);
     margin: none;
     padding: none;
+    visibility: visible;
 }
 
 .pf-page.content.background.hidden {
@@ -42,6 +46,7 @@
     height: calc(100% - 40px);
     background-color: var(--background-default);
     overflow: hidden;
+    visibility: visible;
 }
 
 .pf-page.content.image.hidden {
@@ -52,6 +57,7 @@
     top: -2px;
     margin: none;
     border: 2px solid var(--border-color);
+    visibility: visible;
 }
 
 .pf-page.content.description.hidden {
@@ -63,6 +69,7 @@
     left: 152;
     overflow-y: auto;
     overflow-x: unset;
+    visibility: visible;
 }
 
 .pf-page.content.description.imageless.hidden {
@@ -74,6 +81,7 @@
     left: 0;
     overflow-y: auto;
     overflow-x: unset;
+    visibility: visible;
 }
 
 .pf-sidebar.on {
