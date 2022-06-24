@@ -20,7 +20,8 @@
     display: block;
     font-size: 32px;
     margin: none;
-    height: 32px;
+    padding-top: 2px;
+    height: 36px;
     top: 0;
     background-color: #383838;
     border-bottom: 2px solid var(--border-color);
@@ -36,7 +37,7 @@
 .pf-page.content.background.hidden {
     display: block;
     position: relative;
-    height: calc(100% - 34px);
+    height: calc(100% - 40px);
     background-color: var(--background-default);
     overflow: hidden;
 }
