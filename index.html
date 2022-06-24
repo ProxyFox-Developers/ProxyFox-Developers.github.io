@@ -9,6 +9,14 @@
     </head>
     <body>
         <div id="root" data-ssr-root></div>
+        <script>
+            if (window.matchMedia('(max-width: 600px)').matches) {
+                const splitPath = window.location.pathname.split("/").filter(n => n)
+                if (splitPath.length < 2) {
+                    window.location.href = "/home/about/hidden"
+                }
+            }
+        </script>
         <script type="module" src="./main.tsx"></script>
     </body>
 </html>
