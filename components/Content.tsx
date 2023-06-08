@@ -11,6 +11,7 @@ It looks for certain tags in messages to associate them with a system member, an
 Due to limitations set by Discord, these messages will show as a bot, however, the people using ProxyFox are not bots.
 
 ::https://discord.gg/M2uBsJmRNT
+
 ::https://discord.com/api/oauth2/authorize?client_id=947174063841894500&permissions=277696539728&scope=applications.commands%20bot
 `.trim()
             },
