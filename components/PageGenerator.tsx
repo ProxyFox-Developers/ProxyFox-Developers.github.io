@@ -37,8 +37,10 @@ export default function generatePage(tab?: string, element?: string, hidden = fa
                                 const nStr = str.substring(2)
                                 arr.push(<h2>{nStr}</h2>)
                             } else if (str.startsWith("::")) {
-                                const nStr = str.substring(2)
-                                arr.push(<a className="link" href={nStr}>{nStr}</a>)
+                                const separator = str.lastIndexOf(':')
+                                const link = str.substring(2, separator)
+                                const name = str.substring(separator + 1)
+                                arr.push(<a className="link" href={link}>{name}</a>)
                             } else {
                                 arr.push(<>{str}</>)
                                 arr.push(<br></br>)

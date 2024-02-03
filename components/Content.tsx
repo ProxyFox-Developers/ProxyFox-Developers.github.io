@@ -4,15 +4,15 @@ const content = {
         values: {
             about: {
                 name: "About ProxyFox",
-                image: "https://cdn.discordapp.com/avatars/872276960951296051/2855a032de10cbe0dec4f1177e469e06.png",
+                image: "https://cdn.discordapp.com/avatars/947174063841894500/34e2e26ec442df7a94e2bff682fa0cdf.png?size=256",
                 description: `
 ProxyFox is a modern Discord bot designed for systems to aid communication.
 It looks for certain tags in messages to associate them with a system member, and uses a webhook to proxy that message as a pseudo-user. 
 Due to limitations set by Discord, these messages will show as a bot, however, the people using ProxyFox are not bots.
 
-::https://discord.gg/M2uBsJmRNT
+::https://discord.gg/M2uBsJmRNT:Discord
 
-::https://discord.com/api/oauth2/authorize?client_id=947174063841894500&permissions=277696539728&scope=applications.commands%20bot
+::https://discord.com/api/oauth2/authorize?client_id=947174063841894500&permissions=277696539728&scope=applications.commands%20bot:Add ProxyFox
 `.trim()
             },
             privacy: {
