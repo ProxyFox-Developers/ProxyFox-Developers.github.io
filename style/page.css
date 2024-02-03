@@ -75,3 +75,27 @@
     overflow-y: auto;
     overflow-x: unset;
 }
+
+.deprecation {
+	margin: 0;
+	background-color: #443;
+	padding: 1em;
+}
+
+.deprecation .center {
+	max-width: 900px;
+	margin: auto;
+}
+
+.deprecation img {
+	vertical-align: middle;
+}
+
+.deprecation > h2 {
+	text-align: center;
+	color: #ffa;
+}
+
+.deprecation a {
+	color: #aaf;
+}
